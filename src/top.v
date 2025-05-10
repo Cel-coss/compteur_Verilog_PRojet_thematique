@@ -24,6 +24,9 @@ module tt_um_top (
   // List all unused inputs to prevent warnings
 //  wire _unused = &{ena, clk, rst_n, 1'b0};
   wire _unused = &{ena, 1'b0};
+  wire _unused_ui_in = ui_in;     // 'ui_in' is not used in logic, but listed to prevent warnings
+  wire _unused_uio_in = uio_in;   // 'uio_in' is not used in logic, but listed to prevent warnings
+
 
   counter m_counter (
     .clk  (clk),    // Clock input
